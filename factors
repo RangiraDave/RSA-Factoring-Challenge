@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+def factorize(number):
+    diviser = 2
+
+    while number > 1:
+        if number % diviser == 0:
+            factor = number // diviser
+            break
+        diviser += 1
+    print(f"{number}={factor}*{diviser}")
+
+
+
+def factorize_file(file_p):
+    diviser = 2
+
+    with open(file_p, 'r') as file:
+        for line in file:
+            number = int(line.strip())
+            factor = factorize(number)
+
+file_p = 'test00'
+factorize_file(file_p)
