@@ -1,7 +1,18 @@
 #!/usr/bin/python3
+"""
+Script to factorize a number
+"""
 import sys
 
+
 def factorize(number):
+    """
+    Function to factorize a number
+
+    Args:
+        number (int): The number to factorize
+    """
+
     diviser = 2
     factor = []
     n = number
@@ -29,6 +40,13 @@ def factorize(number):
 
 
 def factorize_file(file_p):
+    """
+    Function to factorize a file
+
+    Args:
+        file_p (str): The path to the file
+    """
+
     diviser = 2
 
     with open(file_p, 'r') as file:
